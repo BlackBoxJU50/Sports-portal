@@ -69,15 +69,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const form1 = document.getElementById('form')
 
-    // Registration form submission logic
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-      
-       
-                
-                    form1.innerHTML = "Registration completed. Please wait for confirmation email.";
-                
-          
-    });
+  
 });
