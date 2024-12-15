@@ -111,7 +111,17 @@ nav ul li a:hover {
     text-align: center;
     color: white;
 }
+#badminton h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: black; /* Black color for heading */
+}
 
+#badminton h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: black; /* Black color for heading */
+}
 #badminton h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
