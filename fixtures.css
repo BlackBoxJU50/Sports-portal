@@ -1,0 +1,162 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    animation: backgroundSlide 15s infinite; /* Apply dynamic background animation */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Dynamic background animation */
+@keyframes backgroundSlide {
+    0% {
+        background-image: url('image1.png');
+    }
+    50% {
+        background-image: url('jucseimg.jpg');
+    }
+    100% {
+        background-image: url('image1.png');
+    }
+}
+
+/* Header and Nav */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* Gradient theme */
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#heading {
+
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #ff4500;
+    
+    
+    }
+    
+    nav ul {
+       
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 20px;
+        margin: 0;
+        gap: 70px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 5px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #ffd700;
+    }
+/* Fixtures Section */
+#fixtures {
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+#fixtures h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #ffd700;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Fixture Cards */
+.fixture-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.fixture-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixture-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.fixture-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.fixture-card p {
+    font-size: 1rem;
+}
+
+.result {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Footer */
+footer {
+    background: #1e3c72;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 300px;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fixture-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

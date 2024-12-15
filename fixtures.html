@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixtures & Results - CSE Sports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #1e3c72, #2a5298);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('image1.png') no-repeat center center/cover;  /* Full-page background image */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #1e3c72, #2a5298); /* Gradient theme */
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        
+        
+        
+         #heading {
+        
+        
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        color: #ff4500;
+        
+        
+        }
+        
+        nav ul {
+           
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+            gap: 70px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffd700;
+        }
+
+        main {
+            padding: 120px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .fixtures-container {
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .fixtures-container h2 {
+            font-size: 2rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .fixtures-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .fixture-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .fixture-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .fixture-item div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .fixture-item .date {
+            font-weight: bold;
+            color: #ff4500;
+        }
+
+        .fixture-item .teams {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .fixture-item .result {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #00ff00;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .fixture-item {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .fixture-item div {
+                text-align: center;
+            }
+
+            .fixtures-container h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">CSE SPORTS</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/badminton.html">Badminton</a></li>
+                <li><a href="/fixtures.html">Fixtures & Results</a></li>
+                <li><a href="https://juniv.edu/department/cse">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="fixtures-container">
+            <h2>Upcoming Fixtures & Latest Results</h2>
+            <ul class="fixtures-list">
+                <li class="fixture-item">
+                    <div class="date">Dec 20, 2024</div>
+                    <div class="teams">Team A vs Team B</div>
+                    <div class="result">Upcoming</div>
+                </li>
+                <li class="fixture-item">
+                    <div class="date">Dec 18, 2024</div>
+                    <div class="teams">Team C vs Team D</div>
+                    <div class="result">Upcoming</div>
+                </li>
+                <li class="fixture-item">
+                    <div class="date">Dec 15, 2024</div>
+                    <div class="teams">Team E vs Team F</div>
+                    <div class="result">Upcoming</div>
+                </li>
+                <li class="fixture-item">
+                    <div class="date">Dec 10, 2024</div>
+                    <div class="teams">Team G vs Team H</div>
+                    <div class="result">Upcoming</div>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

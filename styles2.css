@@ -1,0 +1,240 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('image1.png') no-repeat center center/cover;  /* Full-page background image */
+    background-attachment: fixed;
+    padding-top: 70px; /* Prevents content from hiding behind the fixed navbar */
+}
+
+/* Header and Nav */
+header {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Positions it at the very top of the viewport */
+    left: 0; /* Aligns to the left of the viewport */
+    width: 100%; /* Ensures the navbar spans the full width of the viewport */
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* Gradient theme */
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visual depth */
+}
+
+nav ul {
+   
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    gap: 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffdd57; /* Golden hover color */
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 100px 100px;
+    /* Different background for Home section */
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: greenyellow;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+    box-shadow: #333;
+    margin-top: 70PX;
+    
+}
+
+#home h1:hover {
+    color: #ffdd57; /* Golden color on hover */
+}
+
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+#countdown {
+    
+    justify-content: baseline;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff5722;
+    background: #fff5f3;
+    border: 2px solid #ff5722;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 60px auto;
+    margin-top: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Badminton Section */
+#badminton {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#badminton h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black; /* Black color for heading */
+}
+
+/* Form Styles */
+.form-container {
+    background: rgba(255, 255, 255, 0.9); /* Transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #1e3c72;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #2a5298;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+form button:active {
+    transform: scale(0.95); /* Shrinks button slightly when clicked */
+}
+
+/* Email Field Styles */
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+form input[type="email"]:focus {
+    border-color: #1e3c72; /* Focus color */
+    background: #fff;
+    outline: none;
+}
+
+/* Footer Styles */
+footer {
+    background: #1e3c72;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 190px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .facebook-logo {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #countdown {
+        font-size: 1.5rem;
+    }
+
+    #badminton h2 {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+    }
+}
