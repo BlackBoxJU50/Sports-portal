@@ -14,8 +14,7 @@ body {
 @keyframes backgroundSlide {
     10% { background-image: url('image1.png'); }
     10% { background-image: url('jucseimg.jpg'); }
-    
-    }
+}
 
 /* Header and Nav */
 header {
@@ -31,21 +30,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
- #heading {
-
-
-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 18px;
-color: #ff4500;
-
-
-}
-
 nav ul {
-   
     display: flex;
     justify-content: center;
     list-style: none;
@@ -63,7 +48,6 @@ nav ul li a {
     padding: 5px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav ul li a:hover {
@@ -71,36 +55,12 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
-.bkash-btn {
-    background: #d82327;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    padding: 15px 30px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bkash-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.bkash-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 /* Home Section */
-/* Home Section with Blurred Background */
 #home {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 200px;
+    padding: 150px 20px; /* Adjusted padding for smaller screens */
     background: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
     color: white;
     margin-top: 100px;
@@ -109,44 +69,39 @@ nav ul li a:hover {
     border-radius: 10px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Shadow for better focus */
     animation: fadeIn 2s forwards;
-    
-    
 }
 
-
 #home h1 {
-    font-size: 5rem;
+    font-size: 3rem; /* Reduced size for smaller screens */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #00ff00; /* Bright green for a sporty look */
-    margin-top: 4px; /* Reduce the margin-top */
+    margin-top: 4px;
     margin-bottom: 10px;
 }
 
-
 #home h2 {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduced size for smaller screens */
     font-weight: 600;
-    color: #ff4500; /* Bright red */
+    color: #ff4500;
     background: #ffffff;
     border: 2px solid #ff4500;
     border-radius: 8px;
     display: inline-block;
     padding: 10px 20px;
-    
 }
 
 #home h3 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduced size for smaller screens */
     font-weight: 500;
     font: bold;
-    color: #ffd700; /* Golden yellow */
+    color: #ffd700;
 }
 
 #countdown2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduced size for smaller screens */
     font-weight: 600;
-    color: #ff4500; /* Bright red */
+    color: #ff4500;
     background: #ffffff;
     border: 2px solid #ff4500;
     border-radius: 8px;
@@ -169,47 +124,84 @@ footer p {
     font-size: 14px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #home h1 {
-        font-size: 2.5rem;
-    }
-
-    #home h3 {
-        font-size: 1rem;
-    }
-
-    #countdown2 {
-        font-size: 1rem;
-        padding: 5px 10px;
-    }
-}
 /* Enhanced Registration Button Styles */
 #registration-button {
     background: linear-gradient(45deg, #00c6ff, #0072ff); /* Gradient background */
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduced size for smaller screens */
     font-weight: bold;
     border: none;
     border-radius: 8px;
-    padding: 15px 30px;
+    padding: 12px 25px; /* Adjusted padding for smaller screens */
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
 #registration-button:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    background: linear-gradient(45deg, #0072ff, #00c6ff); /* Reverse gradient on hover */
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 #registration-button:active {
-    transform: scale(0.95); /* Press effect */
+    transform: scale(0.95);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px; /* Reduced gap between items */
+    }
+
+    #home {
+        padding: 100px 20px; /* Reduced padding for smaller screens */
+    }
+
+    #home h1 {
+        font-size: 2.5rem; /* Reduced size for smaller screens */
+    }
+
+    #home h2 {
+        font-size: 1.1rem; /* Reduced size for smaller screens */
+    }
+
+    #home h3 {
+        font-size: 1rem; /* Reduced size for smaller screens */
+    }
+
+    #countdown2 {
+        font-size: 1rem; /* Reduced size for smaller screens */
+        padding: 8px 15px; /* Adjusted padding */
+    }
+
+    #registration-button {
+        font-size: 1rem; /* Adjusted button size */
+        padding: 10px 20px; /* Adjusted padding */
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 2rem; /* Further reduced for mobile screens */
+    }
+
+    #home h2 {
+        font-size: 1rem; /* Further reduced for mobile screens */
+    }
+
+    #home h3 {
+        font-size: 0.9rem; /* Further reduced for mobile screens */
+    }
+
+    #countdown2 {
+        font-size: 0.9rem; /* Further reduced for mobile screens */
+    }
+
+    #registration-button {
+        font-size: 0.9rem; /* Further reduced for mobile screens */
+        padding: 8px 15px; /* Adjusted padding */
+    }
 }
