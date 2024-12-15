@@ -19,32 +19,26 @@ body {
 
 /* Header and Nav */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Positions it at the very top of the viewport */
+    left: 0; /* Aligns to the left of the viewport */
+    width: 100%; /* Ensures the navbar spans the full width of the viewport */
     background: linear-gradient(90deg, #1e3c72, #2a5298); /* Gradient theme */
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
     color: white;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#heading {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    color: #ff4500;
-    font-weight: bold;
+    z-index: 1000; /* Ensures it stays above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visual depth */
 }
 
 nav ul {
+   
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 15px;
+    padding: 20px;
     margin: 0;
-    gap: 50px;
+    gap: 70px;
 }
 
 nav ul li a {
@@ -53,14 +47,15 @@ nav ul li a {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 5px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ffd700;
+    color: #ffdd57; /* Golden hover color */
 }
 
 .bkash-btn {
