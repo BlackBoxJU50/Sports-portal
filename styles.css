@@ -157,6 +157,11 @@ footer p {
         padding: 10px;
     }
 
+    header {
+        position: relative; /* Navbar is no longer fixed */
+        box-shadow: none; /* Optionally, remove the shadow for a simpler design */
+    }
+
     #home {
         padding: 180px 15px; /* Less padding on mobile */
         margin-top: 80px;
