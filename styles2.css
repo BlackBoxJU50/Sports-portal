@@ -2,11 +2,10 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0; /* Removed padding-top */
     color: #333;
-    background: url('image1.png') no-repeat center center/cover;  /* Full-page background image */
+    background: url('image1.png') no-repeat center center/cover; /* Full-page background image */
     background-attachment: fixed;
-    padding-top: 70px; /* Prevents content from hiding behind the fixed navbar */
 }
 
 /* Header and Nav */
@@ -41,7 +40,7 @@ nav ul li a {
     padding: 5px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav ul li a:hover {
@@ -57,7 +56,7 @@ nav ul li a:hover {
     background-position: center center;
     margin-bottom: 20px;
     border-radius: 10px;
-    margin-top: 80px;
+    margin-top: 70px; /* Add margin-top here to prevent overlap */
 }
 
 #home h1 {
@@ -66,7 +65,6 @@ nav ul li a:hover {
     color: greenyellow;
     transition: color 0.3s ease; /* Smooth color change on hover */
     box-shadow: #333;
-    margin-top: 70px;
 }
 
 #home h1:hover {
@@ -146,7 +144,9 @@ form label {
     color: #333;
 }
 
-form input, form select, form button {
+form input,
+form select,
+form button {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -225,6 +225,7 @@ footer .facebook-logo {
     }
 
     header {
+        margin-top: 0%;
         position: relative; /* Navbar is no longer fixed */
         box-shadow: none; /* Optionally, remove the shadow for a simpler design */
     }
@@ -247,7 +248,9 @@ footer .facebook-logo {
         max-width: 100%; /* Make form take full width on smaller screens */
     }
 
-    form input, form select, form button {
+    form input,
+    form select,
+    form button {
         font-size: 16px;
         padding: 12px; /* Increase padding for better touch responsiveness */
     }
@@ -256,7 +259,9 @@ footer .facebook-logo {
         padding: 15px;
     }
 
-    form input, form select, form button {
+    form input,
+    form select,
+    form button {
         margin-bottom: 10px;
     }
 
