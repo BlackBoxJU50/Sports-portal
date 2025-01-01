@@ -11,7 +11,7 @@ body {
 
 /* Header and Nav */
 header {
-    position: relative; /* Fixes the navbar at the top */
+    position: fixed; /* Fixes the navbar at the top */
     top: 0; /* Positions it at the very top of the viewport */
     left: 0; /* Aligns to the left of the viewport */
     width: 100%; /* Ensures the navbar spans the full width of the viewport */
@@ -218,7 +218,7 @@ footer .facebook-logo {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-      nav ul {
+    nav ul {
         flex-direction: column;
         gap: 15px;
         padding: 10px;
