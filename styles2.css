@@ -218,10 +218,15 @@ footer .facebook-logo {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    nav ul {
+      nav ul {
         flex-direction: column;
         gap: 15px;
         padding: 10px;
+    }
+
+    header {
+        position: relative; /* Navbar is no longer fixed */
+        box-shadow: none; /* Optionally, remove the shadow for a simpler design */
     }
 
     #home h1 {
