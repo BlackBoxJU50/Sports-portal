@@ -1,271 +1,111 @@
-/* General styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0; /* Removed padding-top */
-    color: #333;
-    background: url('image1.png') no-repeat center center/cover; /* Full-page background image */
-    background-attachment: fixed;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Sports - JU</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="icon" href="/image.png" />
 
-/* Header and Nav */
-header {
-    position: fixed; /* Fixes the navbar at the top */
-    top: 0; /* Positions it at the very top of the viewport */
-    left: 0; /* Aligns to the left of the viewport */
-    width: 100%; /* Ensures the navbar spans the full width of the viewport */
-    background: linear-gradient(90deg, #1e3c72, #2a5298); /* Gradient theme */
-    padding: 15px 0;
-    text-align: center;
-    color: white;
-    z-index: 1000; /* Ensures it stays above other content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visual depth */
-}
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-    gap: 70px;
-}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                
+                <li><a href="/index.html"> CSE SPORTS</a></li>
+            
+                          <li><a href="/index.html">Home</a></li>
+                <li><a href="/badminton.html">Badminton</a></li>
+                <li><a href="/fixtures.html">Fixtures & Results</a></li>
+                <li><a href="https://juniv.edu/department/cse">About</a></li>
+           
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        
+        
+        <!-- Badminton Section -->
+        <section id="badminton">
+            
+            <div id="countdown"></div>
+            <div class="form-container">
+                <h3>Badminton Tournament - 2025  </h3>
+                <h4>-  organized by CSE-30 Batch  </h4>
+                <h2>Team Registration</h2>
+                <form id="registration-form"
+  action="https://formspree.io/f/xrbgwbzr"
+  method="POST"
+  
+> 
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffdd57; /* Golden hover color */
-}
+                    <label for="team-name">Team Name:</label>
+                    <input type="text" id="team-name" name="team-name" required>
+                    
+                    <label for="player1-name">Player 1 Name:</label>
+                    <input type="text" id="player1-name" name="player1-name" required>
+                    
+                    <label for="player1-batch">Player 1 Batch:</label>
+                    <select id="player1-batch" name="player1_batch" required>
+                        <option value="" disabled selected>Select Batch</option>
+                        <option value="29">Alumni</option>
+                        <option value="29">27</option>
+                        <option value="29">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                    </select>
 
-/* Home Section */
-#home {
-    text-align: center;
-    padding: 100px 100px;
-    background-size: cover;
-    background-position: center center;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    margin-top: 70px; /* Add margin-top here to prevent overlap */
-}
-
-#home h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: greenyellow;
-    transition: color 0.3s ease; /* Smooth color change on hover */
-    box-shadow: #333;
-}
-
-#home h1:hover {
-    color: #ffdd57; /* Golden color on hover */
-}
-
-#home p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: yellow;
-}
-
-#countdown {
-    justify-content: baseline;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ff5722;
-    background: #fff5f3;
-    border: 2px solid #ff5722;
-    border-radius: 8px;
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 60px auto;
-    margin-top: 80px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Badminton Section */
-#badminton {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 20px;
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-#badminton h4 {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: black;
-}
-
-#badminton h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: black;
-}
-
-#badminton h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: black;
-}
-
-/* Form Styles */
-.form-container {
-    background: rgba(255, 255, 255, 0.9); /* Transparent background */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    max-width: 500px;
-    text-align: left;
-    margin: 0 auto; /* Center the form */
-    box-sizing: border-box;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-form input,
-form select,
-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-form button {
-    background: #1e3c72;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
-    border-radius: 5px;
-}
-
-form button:hover {
-    background: #2a5298;
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-form button:active {
-    transform: scale(0.95); /* Shrinks button slightly when clicked */
-}
-
-/* Email Field Styles */
-form input[type="email"] {
-    background: #f9f9f9;
-}
-
-form input[type="email"]:focus {
-    border-color: #1e3c72; /* Focus color */
-    background: #fff;
-    outline: none;
-}
-
-/* Footer Styles */
-footer {
-    background: #1e3c72;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    margin-top: 190px;
-}
-
-footer .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-footer a {
-    text-decoration: none;
-}
-
-footer .facebook-logo {
-    width: 30px;
-    height: 30px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px;
-    }
-
-    header {
-        margin-top: 0%;
-        position: relative; /* Navbar is no longer fixed */
-        box-shadow: none; /* Optionally, remove the shadow for a simpler design */
-    }
-
-    #home h1 {
-        font-size: 2.5rem;
-    }
-
-    #countdown {
-        margin-top: 100px;
-        font-size: 1.5rem;
-    }
-
-    #badminton h2 {
-        font-size: 2rem;
-    }
-
-    .form-container {
-        padding: 20px;
-        max-width: 100%; /* Make form take full width on smaller screens */
-    }
-
-    form input,
-    form select,
-    form button {
-        font-size: 16px;
-        padding: 12px; /* Increase padding for better touch responsiveness */
-    }
-
-    form button {
-        padding: 15px;
-    }
-
-    form input,
-    form select,
-    form button {
-        margin-bottom: 10px;
-    }
-
-    footer .footer-content {
-        flex-direction: column;
-    }
-}
+                    <label for="player2-name">Player 2 Name:</label>
+                    <input type="text" id="player2-name" name="player2-name" required>
+                    
+                    <label for="player2-batch">Player 2 Batch:</label>
+                    <select id="player2-batch" name="player2_batch" required>
+                        <option value="" disabled selected>Select Batch</option>
+                        <option value="29">Alumni</option>
+                        <option value="29">27</option>
+                        <option value="29">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                    </select>
+                    
+                    <label for="extra-player">Extra Player (Optional):</label>
+                    <input type="text" id="extra-player" name="extra-player">
+                    
+                    <label for="transaction-id">Transaction ID:</label>
+                    <input type="text" id="transaction-id" name="transaction-id" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+                
+                <div id="message"></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 CSE-30 Batch, JU. All Rights Reserved.</p>
+            <a href="https://www.facebook.com" target="_blank">
+             
+            </a>
+        </div>
+    </footer>
+    
+    <script src="scripts.js" defer></script>
+    
+</body>
+</html>
