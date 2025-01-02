@@ -69,37 +69,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
 });
-// Simulating the team count increasing over time
-let teamCount = document.getElementById('counter');
-
-function updateTeamCount() {
-    // Increase the team count (for demo, you can fetch real data from a server here)
-    if (teamCount < 3) { // Let's assume there are 50 teams maximum for the demo
-        teamCount++;
-        document.getElementById('team-count').textContent = teamCount;
-    }
-}
-
-// Function to animate the team count
-function animateTeamCount() {
-    let countElement = document.getElementById('team-count');
-    let currentCount = parseInt(countElement.textContent);
-    let targetCount = teamCount;
-
-    if (currentCount < targetCount) {
-        let interval = setInterval(() => {
-            if (currentCount < targetCount) {
-                currentCount++;
-                countElement.textContent = currentCount;
-            } else {
-                clearInterval(interval);
-            }
-        }, 3000); // Adjust speed of the count increase
-    }
-}
-
-// For demonstration, we simulate team registrations
-setInterval(() => {
-    updateTeamCount();
-    animateTeamCount();
-}, 480); // Increase count every 2 seconds for demo purposes
