@@ -12,20 +12,18 @@
             margin: 0;
             padding: 0;
             color: #333;
-            animation: backgroundSlide 15s infinite; /* Apply background animation */
+            animation: backgroundSlide 15s infinite;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Dynamic background animation */
         @keyframes backgroundSlide {
             10% { background-image: url('image1.png'); }
             50% { background-image: url('jucseimg.jpg'); }
             100% { background-image: url('image1.png'); }
         }
 
-        /* Header and Nav */
         header {
             position: fixed; /* Fixes the navbar at the top */
             top: 0; /* Positions it at the very top of the viewport */
@@ -38,56 +36,57 @@
             z-index: 1000; /* Ensures it stays above other content */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visual depth */
         }
-
         
-nav ul {
-   
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-    gap: 70px;
-}
+        nav ul {
+           
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+            gap: 70px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffdd57; /* Golden hover color */
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px;
+            }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffdd57; /* Golden hover color */
-}
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px;
-    }
+            header {
+                position: relative;
+                box-shadow: none;
+            }
+        }
 
-    header {
-        position: relative; /* Navbar is no longer fixed */
-        box-shadow: none; /* Optionally, remove the shadow for a simpler design */
-    }
-}
-
-main {
-    padding: 120px 20px;
+        main {
+            padding: 120px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
         }
 
-        .fixtures-container {
+        .fixtures-container
+        {
             width: 90%;
             max-width: 1200px;
             background: rgba(255, 255, 255, 0.1);
@@ -97,22 +96,44 @@ main {
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             animation: fadeIn 1.5s ease-in-out;
+            margin-bottom: 30px;
+            
+        
         }
-
-        .fixtures-container h2 {
+        .teams-container {
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease-in-out;
+            margin-bottom: 30px;
+        }
+        .fixtures-container h3, .teams-container h3 {
             font-size: 2rem;
-            color: #ffd700;
+            color: rgb(223, 226, 16);
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .fixtures-list {
+        .fixtures-container h2, .teams-container h2 {
+            font-size: 2rem;
+            color: #0011ff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .fixtures-list, .teams-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .fixture-item {
+        .fixture-item
+        {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -122,21 +143,31 @@ main {
             border-radius: 8px;
             margin-bottom: 15px;
             transition: transform 0.3s ease, background-color 0.3s ease;
+            gap: 10px; /* Adds space between child elements */
+        
+        }
+        
+        .team-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .fixture-item:hover {
+        .fixture-item:hover, .team-item:hover {
             transform: translateY(-5px);
             background-color: rgba(255, 215, 0, 0.2);
-        }
-
-        .fixture-item div {
-            flex: 1;
-            text-align: center;
         }
 
         .fixture-item .date {
             font-weight: bold;
             color: #ff4500;
+           
         }
 
         .fixture-item .teams {
@@ -147,10 +178,21 @@ main {
         .fixture-item .result {
             font-size: 1.1rem;
             font-weight: bold;
-            color: #00ff00;
+            color: red;
         }
 
-        /* Animations */
+        .team-item.boys {
+            color: #1e90ff;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+
+        .team-item.girls {
+            color: #ff69b4;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -162,28 +204,45 @@ main {
             }
         }
 
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
-            .fixture-item {
+            .fixture-item, .team-item {
                 flex-direction: column;
                 gap: 10px;
             }
 
-            .fixture-item div {
-                text-align: center;
-            }
-            
-            .fixtures-container h2 {
+            .fixtures-container h2, .teams-container h2 {
                 font-size: 1.5rem;
             }
-            
-            nav ul {
-                flex-direction: column;
-                gap: 15px;
-                padding: 10px;
-            }
         }
-       
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+        }
+
+        .popup.active {
+            display: block;
+        }
+
+        .popup .close-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #ff4500;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
     <link rel="icon" href="/image.png" />
 </head>
@@ -213,18 +272,43 @@ main {
                     <div class="teams">Team C vs Team D</div>
                     <div class="result">Upcoming</div>
                 </li>
-                <li class="fixture-item">
-                    <div class="date">Dec 15, 2024</div>
-                    <div class="teams">Team E vs Team F</div>
-                    <div class="result">Upcoming</div>
-                </li>
-                <li class="fixture-item">
-                    <div class="date">Dec 10, 2024</div>
-                    <div class="teams">Team G vs Team H</div>
-                    <div class="result">Upcoming</div>
-                </li>
+            </ul>
+        </div>
+
+        <div class="teams-container">
+            <h2>Teams List</h2>
+            <h3>Boys Teams</h3>
+            <ul class="teams-list">
+                <li class="team-item boys" onclick="showPopup('Siam (51) & Sadman (51)')">G Minor</li>
+               <!-- <li class="team-item boys" onclick="showPopup('Boys Team 2')">Boys Team 2</li>
+                <li class="team-item boys" onclick="showPopup('Boys Team 3')">Boys Team 3</li> -->
+            </ul>
+            <h3>Girls Teams</h3>
+            <ul class="teams-list">
+               <!-- <li class="team-item girls" onclick="showPopup('Girls Team 1')">Girls Team 1</li>
+                <li class="team-item girls" onclick="showPopup('Girls Team 2')">Girls Team 2</li>
+                <li class="team-item girls" onclick="showPopup('Girls Team 3')">Girls Team 3</li> -->
             </ul>
         </div>
     </main>
+
+    <div id="popup" class="popup">
+        <p id="popup-content"></p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup(teamName) {
+            const popup = document.getElementById('popup');
+            const content = document.getElementById('popup-content');
+            content.textContent = teamName;
+            popup.classList.add('active');
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
