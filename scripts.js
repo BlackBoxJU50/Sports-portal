@@ -74,7 +74,7 @@ let teamCount = document.getElementById('counter');
 
 function updateTeamCount() {
     // Increase the team count (for demo, you can fetch real data from a server here)
-    if (teamCount < 2) { // Let's assume there are 50 teams maximum for the demo
+    if (teamCount < 3) { // Let's assume there are 50 teams maximum for the demo
         teamCount++;
         document.getElementById('team-count').textContent = teamCount;
     }
