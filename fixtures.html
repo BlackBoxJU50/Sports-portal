@@ -1,4 +1,4 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@ l<!DOCTYPE html>
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            overflow-x: hidden ;
         }
 
         @keyframes backgroundSlide {
@@ -33,6 +34,7 @@ l<!DOCTYPE html>
             padding: 15px 0;
             text-align: center;
             color: white;
+            box-sizing: border-box;
             z-index: 1000; /* Ensures it stays above other content */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visual depth */
         }
@@ -68,7 +70,9 @@ l<!DOCTYPE html>
             nav ul {
                 flex-direction: column;
                 gap: 15px;
-                padding: 10px;
+                padding: 0;
+                width: 100%;
+                align-items: center;
             }
 
             header {
@@ -279,15 +283,46 @@ l<!DOCTYPE html>
             <h2>Teams List</h2>
             <h3>Boys Teams</h3>
             <ul class="teams-list">
-                <li class="team-item boys" onclick="showPopup('Siam (31) & Sadman (31)')">G Minor</li>
-                <li class="team-item boys" onclick="showPopup('Shihab(31) & Joy(31)')">Team Bhombola</li>
-                <li class="team-item boys" onclick="showPopup('Ziad(31) & Jakir(31)')">Chalay Den</li> 
+                <li class="team-item boys" onclick="showPopup('Siam (51) & Sadman (51)')">G Minor</li>
+                <li class="team-item boys" onclick="showPopup('Shihab(51) & Joy(51)')">Team Bhombola</li>
+                <li class="team-item boys" onclick="showPopup('Sourov(50) & Mahi(50)')">Beginner</li>
+                <li class="team-item boys" onclick="showPopup('Kamal Uddin(52) & Arif(52) ')">Birds</li>
+                <li class="team-item boys" onclick="showPopup('Arafat(47) & Forhad (47 )')">ছন্নছাড়া</li>
+                <li class="team-item boys" onclick="showPopup('Shahed Annam(50) & Tawhid(50)')">Lobbers</li>
+                <li class="team-item boys" onclick="showPopup('Aqib(52) & Apon ( 52)')">Nemesis_32</li>
+                <li class="team-item boys" onclick="showPopup('Soumitra(52) & Anindya(51)')">Machine lover 32</li>
+                <li class="team-item boys" onclick="showPopup('Ashikur(53) & Ezaz (53)')">HelloWorld</li>
+                <li class="team-item boys" onclick="showPopup('Shanto(53) & Tamzid(51)')">Vikings</li>
+                <li class="team-item boys" onclick="showPopup('Rocke (53) & Antu (53)')">Classic</li>
+                <li class="team-item boys" onclick="showPopup('Saqib(53) & Ommio(53)')">Revengers</li>
+                <li class="team-item boys" onclick="showPopup('Noyon(51) & Abid (51)')">Uiraa Ja</li>
+                <li class="team-item boys" onclick="showPopup('Plabon(51) & Jesan(51)')">Net Masters</li>
+                <li class="team-item boys" onclick="showPopup('Mijanur(53) & Provat (53)')">Mi_Pror</li>
+                <li class="team-item boys" onclick="showPopup('Aditya(52) & Sadik(52)')">Knoobs</li>
+                <li class="team-item boys" onclick="showPopup('Ishtiyak (53) & Tanvir (53)')">The noobs</li>
+                <li class="team-item boys" onclick="showPopup('Muhaimin(53) & Hasan(53)')">NetSetters</li>
+                <li class="team-item boys" onclick="showPopup('Niloy(53) & Istiyak(53)')">NRF-CSE</li>
+                <li class="team-item boys" onclick="showPopup('Pallas(50) & Sourav (50)')">Team_xyz</li>
+                <li class="team-item boys" onclick="showPopup('Ahad(51) & Oyon(51)')">Chill Guy</li>
+                <li class="team-item boys" onclick="showPopup('Rakibul(49) & Mamun(49)')">INFINITE13.2</li>
+                <li class="team-item boys" onclick="showPopup('Ziad(51) & Jakir(51)')">Chalay Den</li>
+               
+                <li id="counter" value="2"></li>
+               <!-- <li class="team-item boys" onclick="showPopup('Boys Team 3')">Boys Team 3</li> -->
             </ul>
             <h3>Girls Teams</h3>
             <ul class="teams-list">
-                <li class="team-item girls" onclick="showPopup('Tanisha (33) & Ayesha(33)')">8003</li>
-               <!-- <li class="team-item girls" onclick="showPopup('Girls Team 2')">Girls Team 2</li>
-                <li class="team-item girls" onclick="showPopup('Girls Team 3')">Girls Team 3</li> -->
+                <li class="team-item girls" onclick="showPopup('Fariha(50) & Anom(50)')">Birdie</li>
+                <li class="team-item girls" onclick="showPopup('Sadia(51) & Kashfia(51)')">Turbid</li>
+                <li class="team-item girls" onclick="showPopup('Dristi(50) & Akhi(50)')">Team Null</li>
+               
+                <li class="team-item girls" onclick="showPopup('Orthy(51) & Shorna(51)')">Team : 3</li>
+                <li class="team-item girls" onclick="showPopup('Fahima(53) & Mitu(53)')">fm_exponential</li>
+                <li class="team-item girls" onclick="showPopup('Shanchita(52) & Alisha(52)')">Shuttle_Stars_32</li>
+                <li class="team-item girls" onclick="showPopup('Ikra(533) & Jeba(53)')">CSE_IM</li>
+                <li class="team-item girls" onclick="showPopup('Mou(53) & Miftahul(53)')">ProgramM</li>
+                <li class="team-item girls" onclick="showPopup('Sabrina (52) &  Pushpa (52)')">Spartans_32</li>
+                <li class="team-item girls" onclick="showPopup('Shanchita(52) & Ayesha(52)')">8003</li>
             </ul>
         </div>
     </main>
@@ -310,5 +345,6 @@ l<!DOCTYPE html>
             popup.classList.remove('active');
         }
     </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
