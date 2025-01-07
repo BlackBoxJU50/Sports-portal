@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000); // Animation delay
 
     // Countdown logic for registration deadline
-    const deadline = new Date("2025-01-06T23:59:59").getTime();
+    const deadline = new Date("2025-01-07T23:59:59").getTime();
     const countdownElem = document.getElementById("countdown");
     const countdownElem2 = document.getElementById("countdown2");
     const form = document.getElementById("registration-form");
